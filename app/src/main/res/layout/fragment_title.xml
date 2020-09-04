@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lightBlue">
+
+        <Button
+            android:id="@+id/btnRing"
+            android:layout_width="174dp"
+            android:layout_height="41dp"
+            android:layout_marginEnd="116dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/round_button_red"
+            android:text="Check Bell Rung"
+            android:textColor="#FFFFFF"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/darkBlue"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/header_title"
+            android:layout_width="500dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="-100dp"
+            android:background="@drawable/round_header"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <Button
+                android:id="@+id/btnHomeLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="65dp"
+                android:text="@string/login"
+                android:textColor="@color/azure"
+                android:background="@color/lightBlue"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/txtSmartHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/smart_home"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/btnDoor"
+            android:layout_width="150dp"
+            android:layout_height="210dp"
+            android:layout_marginTop="65dp"
+            android:background="@color/white"
+            android:clickable="true"
+            android:elevation="3dp"
+            android:focusable="true"
+            android:orientation="vertical"
+            android:alpha="0.9"
+            app:layout_constraintEnd_toStartOf="@+id/btnLight"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/header">
+
+            <ImageView
+                android:id="@+id/iconDoor"
+                android:layout_width="80dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/ic_012_door_knob" />
+
+            <TextView
+                android:id="@+id/txtDoor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="24dp"
+                android:text="@string/door"
+                android:textAlignment="center"
+                android:textColor="@color/azure"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnLight"
+            android:layout_width="150dp"
+            android:layout_height="210dp"
+            android:layout_marginTop="65dp"
+            android:layout_marginEnd="32dp"
+            android:background="@color/white"
+            android:clickable="true"
+            android:elevation="5dp"
+            android:focusable="true"
+            android:orientation="vertical"
+            android:alpha="0.9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/header">
+
+            <ImageView
+                android:id="@+id/iconLight"
+                android:layout_width="80dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/ic_004_lights" />
+
+            <TextView
+                android:id="@+id/txtLight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="24dp"
+                android:text="@string/light"
+                android:textAlignment="center"
+                android:textColor="@color/azure"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnTemp"
+            android:layout_width="150dp"
+            android:layout_height="210dp"
+            android:layout_marginTop="32dp"
+            android:background="@color/white"
+            android:clickable="true"
+            android:elevation="5dp"
+            android:focusable="true"
+            android:orientation="vertical"
+            android:alpha="0.9"
+            app:layout_constraintEnd_toStartOf="@+id/btnAnalysis"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnDoor">
+
+            <ImageView
+                android:id="@+id/iconTemp"
+                android:layout_width="80dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/ic_003_thermostat" />
+
+            <TextView
+                android:id="@+id/txtTemp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="24dp"
+                android:text="@string/temperature"
+                android:textAlignment="center"
+                android:textColor="@color/azure"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnAnalysis"
+            android:layout_width="150dp"
+            android:layout_height="210dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:background="@color/white"
+            android:clickable="true"
+            android:elevation="5dp"
+            android:focusable="true"
+            android:orientation="vertical"
+            android:alpha="0.9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnLight">
+
+            <ImageView
+                android:id="@+id/iconAnalysis"
+                android:layout_width="75dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/ic_013_smart_lock" />
+
+            <TextView
+                android:id="@+id/txtAnalysis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="24dp"
+                android:text="@string/analysis"
+                android:textAlignment="center"
+                android:textColor="@color/azure"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
